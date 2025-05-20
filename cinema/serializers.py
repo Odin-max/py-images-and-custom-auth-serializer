@@ -121,7 +121,6 @@ class MovieSessionDetailSerializer(MovieSessionSerializer):
     taken_places = TicketSeatsSerializer(
         source="tickets", many=True, read_only=True
     )
-    movie = MovieListSerializer(read_only=True)
 
     class Meta:
         model = MovieSession
